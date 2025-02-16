@@ -15,6 +15,12 @@ print('5.1')
 song = """When an eel grabs your arm,
 And it causes great harm,
 That's - a moray"""
+song_lirycs = song.split()
+for i in range(len(song_lirycs)):
+    if song_lirycs[i].startswith('m'):
+        song_lirycs[i] = song_lirycs[i].replace('m', 'M')
+song_join = str
+print(' '.join(song_lirycs))        
 print(song.replace('moray', 'Moray'))
 
 print(5.2)
@@ -96,3 +102,45 @@ print(f"WINNERS: \n {members[0]} {name_of_members[0]} \n {members[1]} {name_of_m
 
 print(F"WINNERS ROUD 2 \n {members_round_2[0]} {name_of_members_2[0]} \n\
  {members_round_2[1]} {name_of_members_2[1]} \n {members_round_2[2]} {name_of_members_2[2]}")
+
+ # глава 6, упражнения
+ 
+print('\n 6.1 \n')
+
+list_of_numbers = [3, 2, 1, 0]
+for i in range(len(list_of_numbers)):
+ print(list_of_numbers[i])
+
+
+print('/n 6.2 \n')
+
+guess_me = int(input())
+
+print('\n Введите переменную number\n')
+number = int(input())
+while number: 
+    if number < guess_me:
+        print( number, 'too low')
+        number += 1
+    elif number == guess_me:
+        print(number, 'found it!')
+        break
+    else:
+        print(number, 'oops')
+        break
+
+
+
+print('\n 6.3 \n')
+print('Введите целое число')
+guess_me = int(input())
+count = int(input())
+for number in range(count):
+    if number > guess_me:
+        print(number, 'oops')
+        break 
+    elif number == guess_me:
+        print(number, 'found it!')
+        break
+    else:
+        print(number, 'too low')
